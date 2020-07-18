@@ -1,0 +1,55 @@
+.navBarBody
+{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    //background-color: #74d3c6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(145deg, #fdfdfd, #eeecec);
+    box-shadow:  20px 20px 40px #767676, 
+             -20px -20px 40px #a0a0a0;
+    animation: navBarEnter .3s linear;
+    position: absolute;
+    position:fixed;
+    z-index: 20;
+}
+@keyframes navBarEnter 
+{
+    0%
+    {
+        margin-top: -60px;
+    }
+    1000%
+    {
+        margin-top: 0px;
+    }
+}
+.logoContainer
+{
+    width: 20%;
+    //background-color: red;
+}
+.navBarContainer
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    //background-color: green;
+}
+.searchContainer
+{
+}
+.searchInput
+{
+    height: 25px;
+    background-color: #e5e9e83d;
+    border-radius: 10px;
+    border-color: transparent;
+    //background: linear-gradient(145deg, #aaa5a5, #b9b7b7);
+    box-shadow:  20px 20px 60px #c0c0c0, 
+             -20px -20px 60px #d4d3d3;
+
+}

@@ -1,0 +1,91 @@
+.modalBody
+{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    z-index: 27;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.modalContainerNoScroll
+{
+
+}
+.modalContainer
+{
+    background-color: #fff;
+    height: 700px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding-left: 30px;
+    //padding-right: 30px;
+    border-radius: 3px;
+}
+.back
+{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -5;
+    filter: blur(10px);
+    background:rgba(0, 0, 0, 0.43);
+}
+.modalContainer .imgContainer
+{
+    height: 400px;
+    width: 800px; 
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    //background: red;
+      
+}
+.imgContainer .img
+{
+    width: 600px;
+    height: 400px;
+    //display: none;
+}
+.modalImg
+{
+    width: 100%;
+}
+.infos
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    height: 20px;
+    margin-top: 7px;
+}
+.imgArrows
+{
+    font-size: 58px;
+    color: rgba(56, 55, 55, 0.082);
+    margin-top: 30%;
+    transition: 0.3s;
+    
+}
+.imgArrows:hover
+{
+    cursor: pointer;
+    color: rgba(20, 20, 20, 0.938);
+}
+.hr{
+    border: none; 
+    width: 600px;
+    margin-top: 7px;
+    border-bottom: 1px solid gainsboro;  
+
+}
+.modalDesc
+{
+    width: 600px;
+    text-align: justify;
+}

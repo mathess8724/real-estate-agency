@@ -1,0 +1,91 @@
+.homeBody
+{
+    //filter: blur(3px);
+
+    //padding-top: 60px;
+    overflow-x: hidden;
+}
+.homeContainair
+{
+    min-height: 100%;
+    width: 100vw;
+    padding-top: 80px;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.propertiesContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    //height: 1500px;
+    //background-color: red;
+}
+.propertieBox
+{
+    width: 250px;
+    height: 400px;
+    background: red;
+    border-radius: 18px;
+    border-radius: 18px;
+    border-radius: 18px;
+    background:#d5d5d5;
+    margin: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: ellipsis;
+}
+.listContainer
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;;
+
+}
+.imgContainer
+{
+    height: 160px;
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.imgBox
+{
+    height: 160px;
+}
+.propertieInfos
+{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    width: 100%;
+    //background: red;
+    
+}
+.descContainer
+{
+    width: 600px;
+    //display: none;
+    
+}
+.postalCode
+{
+    margin-left: 50px
+}
+.propertieBox:hover
+{
+    cursor: pointer;
+}
+.descContainer
+{
+    width: 90%;
+    
+}
+
