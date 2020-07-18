@@ -41,6 +41,8 @@ function Home() {
 
         }
         //console.log(modalInfos.imgGalerie[modalInfos.imgSrc].imgSrc)
+
+
         return (
 
 
@@ -130,14 +132,19 @@ function Home() {
 
         }
         fetchData()
+        
     }, []);
+    /////////////////Links////////////////////////////
+    const [active,setActive] = useState(2)
 
     return (
         <div className="homeBody">
-            <div ref={modalRef} onClick={(e) => handleModal(e.target.className, [])}>
+            <div  ref={modalRef} onClick={(e) => handleModal(e.target.className, [])}>
                 {isModal && Modal(modalInfos)}
             </div>
-            <Navbar />
+            <Navbar updateActive={setActive}
+                    title='the title test'
+                    isActive = {active}/>
             <AdditionalPannel />
             <div className="homeContainair">
                 <h1>Title</h1>
@@ -158,22 +165,16 @@ function Home() {
                                     <div className="descContainer">
                                         <div className="propertieInfos">
                                             <div className='price'>
-                                                Price : {propertie.price} €
+                                               {propertie.price} €
                                         </div>
                                             <div className='nbRoom'>
-                                                {propertie.nbRoom} rooms
+                                                {propertie.city}, {propertie.postalCode}
                                         </div>
                                         </div>
                                         <div className="propertieInfos">
                                             <div className='surface'>
-                                                {propertie.surface} m²
+                                        {propertie.nbRoom} {propertie.nbRoom > 1 ? ' rooms' : ' room'}, {propertie.surface} m2
                                         </div>
-                                            <div className='postalCode'>
-                                                {propertie.postalCode}
-                                            </div>
-                                            <div className='city'>
-                                                {propertie.city}
-                                            </div>
                                         </div>
                                         <div className="descBox">
                                             <p className="descr">{propertie.desc}</p>
