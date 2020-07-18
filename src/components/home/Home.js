@@ -9,6 +9,9 @@ import './modals/Modal.scss'
 
 function Home() {
 
+    const homeBodyref = useRef('homeBodyRef')
+    const [homeHeight,setHomeHeight] = useState(homeBodyref.height)
+
     /////////////////properties array////////////////
     const [propertiesList, setPropertiesList] = useState([])
     /////////////////////////////////////////////////
@@ -127,24 +130,27 @@ function Home() {
             const dbRef = firebase.database().ref('/Properties')
             dbRef.on('value', snapshot => {
                 setPropertiesList(snapshot.val())
-                //console.log(snapshot.val())
+                console.log(homeBodyref)
+                setHomeHeight(homeBodyref.heigth)
+                console.log(homeBodyref)
             })
 
         }
         fetchData()
         
     }, []);
-    /////////////////Links////////////////////////////
-    const [active,setActive] = useState(2)
+    /////////////////Links props////////////////////////////
+    const [active,setActive] = useState(0)
 
     return (
-        <div className="homeBody">
+        <div ref={homeBodyref} className="homeBody">
             <div  ref={modalRef} onClick={(e) => handleModal(e.target.className, [])}>
                 {isModal && Modal(modalInfos)}
             </div>
             <Navbar updateActive={setActive}
                     title='the title test'
-                    isActive = {active}/>
+                    isActive = {active}
+                    homeRef = {homeBodyref}/>
             <AdditionalPannel />
             <div className="homeContainair">
                 <h1>Title</h1>
