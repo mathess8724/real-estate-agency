@@ -37,7 +37,8 @@
     margin: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
 }
 .listContainer
 {
@@ -74,6 +75,15 @@
     width: 600px;
     //display: none;
     
+}
+.ellipsis
+{
+    background: linear-gradient(#d5d5d5ad, #d5d5d5f2, #d5d5d5);
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .postalCode
 {

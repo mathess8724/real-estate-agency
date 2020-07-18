@@ -47,28 +47,28 @@ function Home() {
             <div className="modalBody">
                 <span className="back"></span>
                 <div className="modalContainerNoScroll">
-                <div className="modalContainer">
-                    <h1>{modalInfos.name}</h1>
-                    <div className="imgContainer">
-                        <i onClick={() => changeImg('')} className='fas fa-chevron-left imgArrows'></i>
-                        <img className='img' src={modalInfos.imgGalerie[modalGaleryCurrent].imgSrc} alt="" />
-                        <i onClick={() => changeImg('right')} className='fas fa-chevron-right imgArrows'></i>
-                    </div>
-                    <span className="hr"></span>
-                    <div className="infos">
-                        <div>
-                            {modalInfos.price} €, {modalInfos.nbRoom} {modalInfos.nbRoom > 1 ? ' rooms' : ' room'}, {modalInfos.surface} m2
-                    </div>
-                        <div>
-                            {modalInfos.city}, {modalInfos.postalCode}
+                    <div className="modalContainer">
+                        <h1>{modalInfos.name}</h1>
+                        <div className="imgContainer">
+                            <i style={modalGaleryCurrent < 1 ? { visibility: 'hidden' } : { visibility: 'visible' }} onClick={() => changeImg('')} className='fas fa-chevron-left imgArrows'></i>
+                            <img className='img' src={modalInfos.imgGalerie[modalGaleryCurrent].imgSrc} alt="" />
+                            <i style={modalGaleryCurrent === modalInfos.imgGalerie.length - 1 ? { visibility: 'hidden' } : { visibility: 'visible' }} onClick={() => changeImg('right')} className='fas fa-chevron-right imgArrows'></i>
                         </div>
-                    </div>                    
-                    <span className="hr"></span>
-                    <div className="modalDesc">
-                        <p>{modalInfos.desc}</p>
+                        <span className="hr"></span>
+                        <div className="infos">
+                            <div>
+                                {modalInfos.price} €, {modalInfos.nbRoom} {modalInfos.nbRoom > 1 ? ' rooms' : ' room'}, {modalInfos.surface} m2
                     </div>
+                            <div>
+                                {modalInfos.city}, {modalInfos.postalCode}
+                            </div>
+                        </div>
+                        <span className="hr"></span>
+                        <div className="modalDesc">
+                            <p>{modalInfos.desc}</p>
+                        </div>
 
-                    {/* <h1>{modalInfos.name}</h1>
+                        {/* <h1>{modalInfos.name}</h1>
                
                 <div className="img">
                     <i onClick={ () => changeImg('')} className='fas fa-chevron-left imgArrows'></i>
@@ -97,7 +97,7 @@ function Home() {
                 <div className="descContainer">
                     <p>{modalInfos.desc}</p>
                 </div> */}
-                </div>
+                    </div>
 
                 </div>
             </div>
@@ -108,6 +108,10 @@ function Home() {
         //console.log(id)
         id === 'imgBox' && setIsModal(!isModal)
         id === 'imgBox' && setModalInfos(propertie)
+        id === 'imgBox' && setModalGaleryCurrent(propertie.imgSrc)
+        id === 'propertieBox' && setIsModal(!isModal)
+        id === 'propertieBox' && setModalInfos(propertie)
+        id === 'propertieBox' && setModalGaleryCurrent(propertie.imgSrc)
         id === 'back' && setIsModal(!isModal)
 
     }
@@ -143,7 +147,8 @@ function Home() {
                     <div className="listContainer">
                         {
                             propertiesList.map((propertie, index) => (
-                                <div key={index} className="propertieBox" onClick={(e) => handleModal(e.target.className, propertiesList[index])}>
+                                <div key={index} className="propertieBox" onClick={(e) => handleModal('imgBox', propertiesList[index])}>
+                                    <span className="ellipsis"></span>
                                     <h3>
                                         {propertie.name}
                                     </h3>
@@ -172,6 +177,7 @@ function Home() {
                                         </div>
                                         <div className="descBox">
                                             <p className="descr">{propertie.desc}</p>
+
                                         </div>
                                     </div>
                                 </div>
