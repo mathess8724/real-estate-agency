@@ -9,17 +9,20 @@ function Navbar(props){
     
 
     useEffect(() => {
-            console.log(props.isActive)
-            console.log(props.scrollActive)
+            //console.log(props.isActive)
+            //console.log(props.scrollActive)
 
         },[]);
 
         function handleActive(id){
             //console.log('id is', id, 'props is ',  props.isActive)
-            console.log(props.homeRef.current.clientHeight)
+            //console.log(props.homeRef.current.clientHeight)
             props.updateActive(id)
+            id === 0 ? props.updateTypes('sale') : props.updateTypes('rent')
             //console.log('id is', id, 'props is ',  props.isActive)
         }
+
+       
     return(
         <div ref={navbarRef} className="navBarBody">
            <div className="logoContainer">

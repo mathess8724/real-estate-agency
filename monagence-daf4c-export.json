@@ -2,115 +2,153 @@
   "Properties" : [ {
     "addedDate" : 0,
     "city" : "paris",
-    "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum purus, sodales eu velit ac, euismod auctor dui. Proin porta congue est, quis semper sem faucibus quis. Etiam ac ultricies metus. Donec eleifend erat a felis malesuada condimentum. Aliquam vulputate faucibus enim, et vulputate ligula pretium ",
     "id" : 12345,
-    "imgSrc" : 0,
-    "name" : "best house!",
-    "nbRoom" : 4,
-    "postalCode" : 95000,
-    "price" : 350000,
-    "surface" : 176,
-    "imgGalerie" : [
-                  { "id" : 0, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"},
-                  { "id" : 1, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"},
-                  { "id" : 2, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"},
-                  { "id" : 3, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"}
-    ]
-  },
-  {
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
+    "imgSrc" : 3,
+    "name" : "Quiet appartment",
+    "nbRoom" : 1,
+    "postalCode" : 93000,
+    "price" : 170000,
+    "surface" : 75,
+    "type" : "rent"
+  }, {
     "addedDate" : 1549784517,
     "city" : "paris",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 1,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
     "imgSrc" : 0,
-    "name" : "best house!",
+    "name" : "beautiful house!",
     "nbRoom" : 4,
-    "postalCode" : 95000,
-    "price" : 350000,
-    "surface" : 176,
-    "imgGalerie" : [
-      { "id" : 0, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"},
-      { "id" : 1, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"},
-      { "id" : 2, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"},
-      { "id" : 3, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"}
-]
-
-  },
-  {
+    "postalCode" : 75000,
+    "price" : 250000,
+    "surface" : 148,
+    "type" : "rent"
+  }, {
     "addedDate" : 1549784517,
     "city" : "paris",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 2,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
     "imgSrc" : 0,
-    "name" : "best house!",
-    "nbRoom" : 4,
+    "name" : "6 rooms house",
+    "nbRoom" : 6,
     "postalCode" : 95000,
     "price" : 350000,
     "surface" : 176,
-    "imgGalerie" : [
-      { "id" : 0, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"},
-      { "id" : 1, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"},
-      { "id" : 2, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"},
-      { "id" : 3, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"}
-]
-
-  },
-  {
+    "type" : "rent"
+  }, {
     "addedDate" : 1549784517,
-    "city" : "paris",
+    "city" : "Marseille",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 3,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
     "imgSrc" : 0,
-    "name" : "best house!",
-    "nbRoom" : 4,
-    "postalCode" : 95000,
-    "price" : 350000,
-    "surface" : 176,
-    "imgGalerie" : [
-      { "id" : 0, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"},
-      { "id" : 1, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"},
-      { "id" : 2, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"},
-      { "id" : 3, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"}
-]
-
-  },
-  {
+    "name" : "big house!",
+    "nbRoom" : 8,
+    "postalCode" : 13000,
+    "price" : 450000,
+    "surface" : 235,
+    "type" : "rent"
+  }, {
     "addedDate" : 1549784517,
-    "city" : "paris",
+    "city" : "Bordeaux",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 4,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
     "imgSrc" : 0,
-    "name" : "best house!",
-    "nbRoom" : 4,
-    "postalCode" : 95000,
-    "price" : 350000,
-    "surface" : 176,
-    "imgGalerie" : [
-      { "id" : 0, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"},
-      { "id" : 1, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"},
-      { "id" : 2, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"},
-      { "id" : 3, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"}
-]
-
+    "name" : "well placed house in center",
+    "nbRoom" : 3,
+    "postalCode" : 33000,
+    "price" : 262000,
+    "surface" : 110,
+    "type" : "rent"
   } ],
   "properties_old" : [ {
     "addedDate" : "vendredi 13 septembre 2019 à 06:12",
     "category" : "appartement",
     "compareDate" : "1568347951422",
     "description" : "le test d une maison",
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
     "localisation" : "Nancy",
     "photos" : [ "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1568347926660?alt=media&token=26ffaab1-c7bb-43ab-9cae-a77ceb5d0bdf" ],
     "price" : "295 500",
     "propertyId" : "0",
     "rooms" : "1",
     "surface" : "150",
-    "title" : "maison",
-    "imgGalerie" : [
-      { "id" : 0, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"},
-      { "id" : 1, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"},
-      { "id" : 2, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"},
-      { "id" : 3, "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"}
-]
-
+    "title" : "maison"
   } ]
 }
