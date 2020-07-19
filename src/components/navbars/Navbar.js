@@ -7,7 +7,7 @@ function Navbar(props) {
 
     const navbarRef = useRef('navbarRef')
 
-    const [responsiveNav, setResponsiveNav] = useState(false)
+    const [responsiveNav, setResponsiveNav] = useState(null)
 
 
     useEffect(() => {

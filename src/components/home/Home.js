@@ -51,6 +51,7 @@ function Home() {
                 <span className="back"></span>
                 <div className="modalContainerNoScroll">
                     <div className="modalContainer">
+                    <i onClick={ () => setIsModal(!isModal)} className="far fa-times-circle closeButton"></i>
                         <h1>{modalInfos.name}</h1>
                         <div className="imgContainer">
                             <i style={modalGaleryCurrent < 1 ? { visibility: 'hidden' } : { visibility: 'visible' }} onClick={() => changeImg('')} className='fas fa-chevron-left imgArrows'></i>
