@@ -6,6 +6,8 @@ import * as firebase from 'firebase'
 import FirebaseConfig from '../config/FirebaseConfig.js'
 import { useEffect } from 'react';
 import './modals/Modal.scss'
+import RangeSlider from '../sliders/RangeSlider';
+//import RangeSlider from '../sliders/RangeSlider';
 
 function Home() {
     /////////////////refs/////////////////////////////
@@ -17,6 +19,7 @@ function Home() {
     const [search, setSearch] = useState()
     const [propertiestype, setPropertiestype] = useState('sale')
     const [sortInfos, setSortinfos] = useState({ sort: 0, direction: true })
+    const [maxPrice, setMaxPrice] = useState(1000000)
     /////////////////////////////////////////////////
 
     /////////////////modal param/////////////////////
@@ -67,36 +70,6 @@ function Home() {
                         <div className="modalDesc">
                             <p>{modalInfos.desc}</p>
                         </div>
-
-                        {/* <h1>{modalInfos.name}</h1>
-               
-                <div className="img">
-                    <i onClick={ () => changeImg('')} className='fas fa-chevron-left imgArrows'></i>
-                    <img  style={{height:'100%', width:'100%'}} src={modalInfos.imgGalerie[modalGaleryCurrent].imgSrc} alt='propertie Image'/>
-                    {
-                        modalGaleryCurrent <= modalInfos.imgGalerie.length && <i onClick={ () => changeImg('right')} className='fas fa-chevron-right imgArrows'></i>
-                    }                    
-                    
-                </div>
-                
-                    <span className="hr"></span>
-                <div className="infos">
-                    <div>
-                        {modalInfos.price} €
-                    </div>
-                    <div>
-                        {modalInfos.city}, {modalInfos.postalCode}
-                    </div>
-                </div>
-                <div className="infos">
-                    <div>
-                        {modalInfos.nbRoom} {modalInfos.nbRoom >1 ? ' rooms' : ' room'}, {modalInfos.surface} m2
-                    </div>                    
-                </div>
-                <span className="hr"></span>
-                <div className="descContainer">
-                    <p>{modalInfos.desc}</p>
-                </div> */}
                     </div>
 
                 </div>
@@ -130,8 +103,8 @@ function Home() {
                 //console.log(homeBodyref)
                 setHomeHeight(homeBodyref.heigth)
                 //console.log(homeBodyref)
-            })
 
+            })
         }
         fetchData()
 
@@ -150,24 +123,24 @@ function Home() {
             //sort by price
             if (sortInfos.sort === 0) {
                 sortInfos.direction ? result = array.sort((a, b) => a.price - b.price) : result = array.sort((a, b) => b.price - a.price)
-                console.log(result)
+                //console.log(result)
             }
             //sort by surface
             if (sortInfos.sort === 1) {
                 sortInfos.direction ? result = array.sort((a, b) => a.surface - b.surface) : result = array.sort((a, b) => b.surface - a.surface)
-                console.log(result)
+                //console.log(result)
             }
 
             //sort by rooms
             if (sortInfos.sort === 2) {
                 sortInfos.direction ? result = array.sort((a, b) => a.nbRoom - b.nbRoom) : result = array.sort((a, b) => b.nbRoom - a.nbRoom)
-                console.log(result)
+                //console.log(result)
             }
 
             //sort by postalCode
             if (sortInfos.sort === 3) {
                 sortInfos.direction ? result = array.sort((a, b) => a.postalCode - b.postalCode) : result = array.sort((a, b) => b.postalCode - a.postalCode)
-                console.log(result)
+                //console.log(result)
             }
 
 
@@ -180,7 +153,7 @@ function Home() {
 
 
     }
-
+    ///////////////////////////////////////////////////////////
     return (
         <div ref={homeBodyref} className="homeBody">
             <div ref={modalRef} onClick={(e) => handleModal(e.target.className, [])}>
@@ -192,7 +165,12 @@ function Home() {
                 homeRef={homeBodyref}
                 Types={propertiestype}
                 updateTypes={setPropertiestype} />
-            <AdditionalPannel updateSort={setSortinfos} />
+            <AdditionalPannel updateSort={setSortinfos}
+                sortInfos={sortInfos}
+                maxPrice={maxPrice}
+                updateMaxPrice={setMaxPrice}
+                propertiesList={propertiesList}
+                propertiestype={propertiestype} />
             <div className="homeContainair">
                 <h1 onClick={() => checkSort(propertiesList)}>Title .</h1>
                 <hr className="horizontalLine" />
@@ -202,6 +180,8 @@ function Home() {
                         {
                             checkSort(propertiesList).filter(filteredProperties =>
                                 filteredProperties.type === propertiestype)
+                                .filter(filteredProperties =>
+                                    filteredProperties.price < maxPrice)
                                 .map((propertie, index) => (
                                     <div key={index} className="propertieBox" onClick={(e) => handleModal('imgBox', propertiesList[index])}>
                                         <span className="ellipsis"></span>

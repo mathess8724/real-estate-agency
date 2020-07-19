@@ -15,6 +15,72 @@
     position: absolute;
     position:fixed;
     z-index: 20;
+    transition: 1s;
+    
+}
+.responsive
+{
+    margin-top: -250px;
+    transition: 2s;
+}
+@media screen and (max-width:900px)
+{
+    .navBarBody
+    {
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        height: 250px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    
+    }
+    .logoContainer
+    {
+        margin-top: -40px;
+    }
+    .navBarContainer
+    {
+        justify-content: space-evenly;
+        flex-direction: column;
+        position: relative;
+    }
+    .navbarLink
+    {
+        //margin-top: -50px;
+        margin-bottom: 10px;
+        //display: none;
+    }
+    .navbarLinkActive
+    {
+        //margin-top: -50px;
+        margin-bottom: 10px;
+        //display: none;
+    }
+    .searchContainer
+    {
+        margin-top: 10px;
+    }
+}
+.responsiveClose
+{
+    position: absolute;
+    bottom: -50px;
+    font-size: 46px;
+    color: rgba(139, 139, 139, 0.466);
+    cursor: pointer;
+}
+.responsiveArrowUp
+{
+    transition: 2s;
+    color: rgba(139, 139, 139, 0.356);
+
+}
+.responsiveArrowDown
+{
+    transform: rotate(-180deg);
+    transition: 1s;
+    color: rgb(0, 0, 0);
+
 }
 @keyframes navBarEnter 
 {
