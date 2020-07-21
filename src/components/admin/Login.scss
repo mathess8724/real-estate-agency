@@ -1,0 +1,166 @@
+
+.adminBody
+{
+    position: absolute;
+    position: fixed;
+    z-index: 100;
+}
+.adminBackground
+{
+    height: 100vh;
+    width: 100vw;
+    //background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    position: fixed;
+    //animation: adminIn 3s linear;    
+}
+@keyframes inLeft
+{
+    0%
+    {
+        margin-left: -3000px;
+    }
+    100%
+    {
+        margin-left: 0px;
+    }
+}
+.adminBackground .wheelContainer
+{   
+    overflow: hidden;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;  
+    animation :  inRight .4s linear ;
+}
+
+@keyframes inRight
+{
+    0%
+    {
+        opacity: 0;
+        margin-right: -3000px;
+    }
+    100%
+    {
+        opacity: 1;
+        margin-right: 0px;
+    }
+}
+.adminBackground .wheel1
+{
+   height: 800px;
+   position: absolute;
+   margin-top: 100px;
+   margin-left: -350px;
+   z-index: 10;
+   animation: wheel1 10s linear infinite;
+   opacity: .8;
+   filter: blur(1px);
+   
+}
+@keyframes wheel1
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(90deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.wheel2
+{
+  height: 500px;
+  margin-left: 500px;
+  margin-top: -400px;
+  position: absolute;
+  animation: wheel1 5s linear reverse infinite;
+  filter: opacity(.5);
+  filter: blur(2px);
+}
+.loginContainer
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.726);
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: -15px -10px 14px 0px rgb(94, 90, 90);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 200;
+    animation :  inLeft .4s linear ;
+}
+
+@keyframes adminIn2
+{
+    0%
+    {
+        opacity: 0;
+        margin-left: -1500px;
+    }
+    100%
+    {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+.loginContainer h1
+{
+    color: rgb(196, 191, 191);
+    margin-top: -20px;
+}
+.mailInput
+{
+    height:  40px;
+    width: 300px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.452);
+}
+.mailInput
+{
+
+}
+.passInput
+{
+    height:  40px;
+    width: 300px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.452);
+
+}
+.connectButton
+{
+    width: 100px;
+    height: 30px;
+    background: rgba(240, 239, 239, 0.966);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 3px;
+    }
+.connectButton:hover
+{
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+
+}

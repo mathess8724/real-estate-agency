@@ -11,7 +11,10 @@ function AdditionalPannel(props) {
         setIsSlidePannel(!isSlidePannel)
     }
     function handleSort(sortType, direction = true) {
-        props.updateSort({ sort: sortType, direction })
+        //console.log(props.sortInfos.sort)
+        
+           props.updateSort({ sort: sortType, direction })
+        
     }
 
     return (

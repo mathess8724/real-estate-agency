@@ -21,12 +21,12 @@
     "name" : "Quiet appartment",
     "nbRoom" : 1,
     "postalCode" : 93000,
-    "price" : 170000,
+    "price" : 180000,
     "surface" : 75,
     "type" : "rent"
   }, {
     "addedDate" : 1549784517,
-    "city" : "paris",
+    "city" : "sarrebourg",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 1,
     "imgGalerie" : [ {
@@ -48,10 +48,10 @@
     "postalCode" : 75000,
     "price" : 250000,
     "surface" : 148,
-    "type" : "rent"
+    "type" : "sale"
   }, {
     "addedDate" : 1549784517,
-    "city" : "paris",
+    "city" : "lyon",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 2,
     "imgGalerie" : [ {
@@ -73,10 +73,10 @@
     "postalCode" : 95000,
     "price" : 350000,
     "surface" : 176,
-    "type" : "rent"
+    "type" : "sale"
   }, {
     "addedDate" : 1549784517,
-    "city" : "Marseille",
+    "city" : "paris",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 3,
     "imgGalerie" : [ {
@@ -101,7 +101,7 @@
     "type" : "rent"
   }, {
     "addedDate" : 1549784517,
-    "city" : "Bordeaux",
+    "city" : "bordeaux",
     "desc" : "lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input lorem input",
     "id" : 4,
     "imgGalerie" : [ {
@@ -124,6 +124,136 @@
     "price" : 262000,
     "surface" : 110,
     "type" : "rent"
+  },
+  {
+    "addedDate" : 0,
+    "city" : "paris",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum purus, sodales eu velit ac, euismod auctor dui. Proin porta congue est, quis semper sem faucibus quis. Etiam ac ultricies metus. Donec eleifend erat a felis malesuada condimentum. Aliquam vulputate faucibus enim, et vulputate ligula pretium ",
+    "id" : 12345,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
+    "imgSrc" : 3,
+    "name" : " 3 rooms appartment",
+    "nbRoom" : 1,
+    "postalCode" : 93000,
+    "price" : 180000,
+    "surface" : 75,
+    "type" : "sell"
+  },
+  {
+    "addedDate" : 0,
+    "city" : "paris",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum purus, sodales eu velit ac, euismod auctor dui. Proin porta congue est, quis semper sem faucibus quis. Etiam ac ultricies metus. Donec eleifend erat a felis malesuada condimentum. Aliquam vulputate faucibus enim, et vulputate ligula pretium ",
+    "id" : 12345,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
+    "imgSrc" : 3,
+    "name" : "2 rooms appartment",
+    "nbRoom" : 1,
+    "postalCode" : 93000,
+    "price" : 180000,
+    "surface" : 75,
+    "type" : "sale"
+  },
+  {
+    "addedDate" : 0,
+    "city" : "paris",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum purus, sodales eu velit ac, euismod auctor dui. Proin porta congue est, quis semper sem faucibus quis. Etiam ac ultricies metus. Donec eleifend erat a felis malesuada condimentum. Aliquam vulputate faucibus enim, et vulputate ligula pretium ",
+    "id" : 12345,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
+    "imgSrc" : 3,
+    "name" : "2 room appartment",
+    "nbRoom" : 1,
+    "postalCode" : 93000,
+    "price" : 150000,
+    "surface" : 75,
+    "type" : "sell"
+  },
+  {
+    "addedDate" : 0,
+    "city" : "paris",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum purus, sodales eu velit ac, euismod auctor dui. Proin porta congue est, quis semper sem faucibus quis. Etiam ac ultricies metus. Donec eleifend erat a felis malesuada condimentum. Aliquam vulputate faucibus enim, et vulputate ligula pretium ",
+    "id" : 12345,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
+    "imgSrc" : 3,
+    "name" : "nice studio",
+    "nbRoom" : 1,
+    "postalCode" : 93000,
+    "price" : 180500,
+    "surface" : 75,
+    "type" : "sell"
+  },
+  {
+    "addedDate" : 0,
+    "city" : "paris",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum purus, sodales eu velit ac, euismod auctor dui. Proin porta congue est, quis semper sem faucibus quis. Etiam ac ultricies metus. Donec eleifend erat a felis malesuada condimentum. Aliquam vulputate faucibus enim, et vulputate ligula pretium ",
+    "id" : 12345,
+    "imgGalerie" : [ {
+      "id" : 0,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561079043921?alt=media&token=d808e48c-57e9-4e33-a84d-509c9e1f8fb2"
+    }, {
+      "id" : 1,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080864983?alt=media&token=aa3dde2f-7be8-48ee-98f8-a769f79cf925"
+    }, {
+      "id" : 2,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080948255?alt=media&token=d9593893-df34-4649-8c4d-4eb824fc4fee"
+    }, {
+      "id" : 3,
+      "imgSrc" : "https://firebasestorage.googleapis.com/v0/b/monagence-daf4c.appspot.com/o/images%2Fproperties%2F1561080956584?alt=media&token=0752c5bd-5568-44dc-bce4-8d83af890968"
+    } ],
+    "imgSrc" : 3,
+    "name" : "10 rooms hostel",
+    "nbRoom" : 1,
+    "postalCode" : 93000,
+    "price" : 700000,
+    "surface" : 75,
+    "type" : "sell"
   } ],
   "properties_old" : [ {
     "addedDate" : "vendredi 13 septembre 2019 à 06:12",

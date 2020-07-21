@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.scss';
 import compagnyLogo from './compagny-logo.png'
 import Search from '../Searchs/Search'
-
-
+import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom'
+import * as firebase from 'firebase'
 function Navbar(props) {
 
     const navbarRef = useRef('navbarRef')
@@ -59,6 +60,9 @@ function Navbar(props) {
         ///////////////////////////////////////////////
 
 
+        function handleLog(){
+            !props.User ? props.setLogin(true) : firebase.auth().signOut()
+        }
 
 
 
@@ -71,6 +75,7 @@ function Navbar(props) {
                 <div className={props.isActive === 0 ? 'navbarLinkActive' : 'navbarLink'} onClick={() => handleActive(0)}  >Properties for sale</div>
                 <div className={props.isActive === 1 ? 'navbarLinkActive' : 'navbarLink'} onClick={() => handleActive(1)} >Properties for rent</div>
                 <div className={props.isActive === 2 ? 'navbarLinkActive' : 'navbarLink'} onClick={() => handleActive(2)} >About compagny</div>
+                <div className='signInbutton' onClick={ () => handleLog()} >{props.User ? 'logout' : 'sign in'}</div>
                 <div className="searchContainer">
                     <input onChange={ () => handleSearch(searchRef) } ref={searchRef} type="text" className="searchInput" placeholder='Search ...' />
                 </div>

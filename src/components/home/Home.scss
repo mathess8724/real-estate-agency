@@ -121,5 +121,38 @@
     width: 90%;
     
 }
+.homeBody .adminBackground
+{
+   
+    position: absolute;
+    
+}
+#adminBackgroundOn
+{
+    z-index: -100;
+}
+#adminBodyOn
+{
+    z-index: -100
+}
+#wheelOn
+{
+    
+    animation:none;
+    transition: 3s;
+    //animation: wheelopac 3s linear;
+}
+@keyframes wheelopac
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: .5;
+    }
+}
+
 
 

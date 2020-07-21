@@ -7,9 +7,19 @@ import FirebaseConfig from '../config/FirebaseConfig.js'
 import { useEffect } from 'react';
 import './modals/Modal.scss'
 import RangeSlider from '../sliders/RangeSlider';
+import Login from '../admin/Login'
+import Wheel from '../admin/wheel2.png'
+
 //import RangeSlider from '../sliders/RangeSlider';
 
-function Home() {
+function Home(props) {
+
+
+    //////////////////user////////////////////////////
+    //const [user,setUser] = useState()
+    const [login, setLogin] = useState(false)
+    //////////////////////////////////////////////////
+
     /////////////////refs/////////////////////////////
     const homeBodyref = useRef('homeBodyRef')
     const [homeHeight, setHomeHeight] = useState(homeBodyref.height)
@@ -17,13 +27,13 @@ function Home() {
     /////////////////properties array////////////////
     const [propertiesList, setPropertiesList] = useState([])
     const [propertiestype, setPropertiestype] = useState('sale')
-    const [sortInfos, setSortinfos] = useState({ sort: 0, direction: true })
+    const [sortInfos, setSortinfos] = useState({ sort: null, direction: true })
     const [maxPrice, setMaxPrice] = useState(1000000)
     /////////////////////////////////////////////////
 
     ///////////////Search/////////////////////////////
-    const[searchResult,setSearchresult] = useState([])
-    const [search,setSearch] = useState(false)
+    const [searchResult, setSearchresult] = useState([])
+    const [search, setSearch] = useState(false)
     /////////////////////////////////////////////////
 
     /////////////////modal param/////////////////////
@@ -55,7 +65,7 @@ function Home() {
                 <span className="back"></span>
                 <div className="modalContainerNoScroll">
                     <div className="modalContainer">
-                    <i onClick={ () => setIsModal(!isModal)} className="far fa-times-circle closeButton"></i>
+                        <i onClick={() => setIsModal(!isModal)} className="far fa-times-circle closeButton"></i>
                         <h1>{modalInfos.name}</h1>
                         <div className="imgContainer">
                             <i style={modalGaleryCurrent < 1 ? { visibility: 'hidden' } : { visibility: 'visible' }} onClick={() => changeImg('')} className='fas fa-chevron-left imgArrows'></i>
@@ -97,7 +107,8 @@ function Home() {
     /////////////////////////////////////////////////    
     useEffect(() => {
 
-        firebase.initializeApp(FirebaseConfig())
+        FirebaseConfig()
+        //firebase.initializeApp(FirebaseConfig())
         const fetchData = () => {
             const dbRef = firebase.database().ref('/Properties')
             dbRef.on('value', snapshot => {
@@ -108,7 +119,22 @@ function Home() {
                 //console.log(homeBodyref)
                 setHomeHeight(homeBodyref.heigth)
                 //console.log(homeBodyref)
+                /* firebase.auth().onAuthStateChanged(function(user) {
+                    if (user) {
+                      console.log('user')
+                      setUser(user)
+                    } else {
+                      console.log('no user')
+                    }
+                  }); */
 
+                /*  firebase.auth().signInWithEmailAndPassword('mathesmsm@gmail.com', '87244168Math').catch(function(error) {
+                     // Handle Errors here.
+                     var errorCode = error.code;
+                     var errorMessage = error.message;
+                     // ...
+                     //console.log(firebase.auth().currentUser)
+                 }); */
             })
         }
         fetchData()
@@ -148,7 +174,9 @@ function Home() {
                 //console.log(result)
             }
 
-
+            if (sortInfos.sort === null) {
+                return array
+            }
             return result
         } else {
             return array
@@ -161,6 +189,20 @@ function Home() {
     ///////////////////////////////////////////////////////////
     return (
         <div ref={homeBodyref} className="homeBody">
+
+
+            {
+                props.User &&
+                <div id='adminBodyOn' className="adminBody">
+                    <div id='adminBackgroundOn' className={'adminBackground '}>
+                        <div id='wheelOn' className="wheelContainer">
+                            <img className='wheel1' src={Wheel} alt="wheel" />
+                            <img className='wheel2' src={Wheel} alt="wheel" />
+                        </div>
+
+                    </div>
+                </div>
+            }
             <div ref={modalRef} onClick={(e) => handleModal(e.target.className, [])}>
                 {isModal && Modal(modalInfos)}
             </div>
@@ -172,7 +214,15 @@ function Home() {
                 updateTypes={setPropertiestype}
                 searchArray={propertiesList}
                 updateResults={setSearchresult}
-                setSearch={setSearch} />
+                setSearch={setSearch}
+                login={login}
+                setLogin={setLogin}
+                User={props.User} />
+            {
+                login ? <Login User={props.User}
+                    login={login}
+                    setLogin={setLogin} /> : <div></div>
+            }
             <AdditionalPannel updateSort={setSortinfos}
                 sortInfos={sortInfos}
                 maxPrice={maxPrice}
@@ -186,41 +236,41 @@ function Home() {
                     <h2>Properties</h2>
                     <div className="listContainer">
                         {
-                            
-                           search && searchResult.length <1 ? <div>Sorry, no result</div> :
-                            checkSort(search  ? searchResult : propertiesList).filter(filteredProperties =>
-                                filteredProperties.type === propertiestype)
-                                .filter(filteredProperties =>
-                                    filteredProperties.price < maxPrice)
-                                .map((propertie, index) => (
-                                    <div key={index} className="propertieBox" onClick={(e) => handleModal('imgBox', propertiesList[index])}>
-                                        <span className="ellipsis"></span>
-                                        <h3>
-                                            {propertie.name}
-                                        </h3>
-                                        <div className="imgContainer">
-                                            <img style={{ width: '100%', heigth: '100%' }} src={propertie.imgGalerie[propertie.imgSrc].imgSrc} alt="propertie Image" className="imgBox" />
+
+                            search && searchResult.length < 1 ? <div>Sorry, no result</div> :
+                                checkSort(search ? searchResult : propertiesList).filter(filteredProperties =>
+                                    filteredProperties.type === propertiestype)
+                                    .filter(filteredProperties =>
+                                        filteredProperties.price < maxPrice)
+                                    .map((propertie, index) => (
+                                        <div key={index} className="propertieBox" onClick={(e) => handleModal('imgBox', propertiesList[index])}>
+                                            <span className="ellipsis"></span>
+                                            <h3>
+                                                {propertie.name}
+                                            </h3>
+                                            <div className="imgContainer">
+                                                <img style={{ width: '100%', heigth: '100%' }} src={propertie.imgGalerie[propertie.imgSrc].imgSrc} alt="propertie Image" className="imgBox" />
+                                            </div>
+                                            <div className="descContainer">
+                                                <div className="propertieInfos">
+                                                    <div className='price'>
+                                                        {propertie.price} €
                                         </div>
-                                        <div className="descContainer">
-                                            <div className="propertieInfos">
-                                                <div className='price'>
-                                                    {propertie.price} €
+                                                    <div className='nbRoom'>
+                                                        {propertie.city}, {propertie.postalCode}
+                                                    </div>
+                                                </div>
+                                                <div className="propertieInfos">
+                                                    <div className='surface'>
+                                                        {propertie.nbRoom} {propertie.nbRoom > 1 ? ' rooms' : ' room'}, {propertie.surface} m2
                                         </div>
-                                                <div className='nbRoom'>
-                                                    {propertie.city}, {propertie.postalCode}
+                                                </div>
+                                                <div className="descBox">
+                                                    <p className="descr">{propertie.desc}</p>
                                                 </div>
                                             </div>
-                                            <div className="propertieInfos">
-                                                <div className='surface'>
-                                                    {propertie.nbRoom} {propertie.nbRoom > 1 ? ' rooms' : ' room'}, {propertie.surface} m2
                                         </div>
-                                            </div>
-                                            <div className="descBox">
-                                                <p className="descr">{propertie.desc}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))
+                                    ))
                         }
                     </div>
                 </div>

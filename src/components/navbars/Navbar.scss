@@ -14,7 +14,7 @@
     animation: navBarEnter .3s linear;
     position: absolute;
     position:fixed;
-    z-index: 20;
+    z-index: 220;
     transition: .3s;
     
 }
@@ -166,4 +166,19 @@
 .navbarLinkActive:hover
 {
     cursor: pointer;
+}
+.signInbutton
+{
+    height: 30px;
+    width: 80px;
+    background: rgba(218, 216, 216, 0.63);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signInbutton:hover{
+    cursor: pointer;
+    background: rgba(218, 216, 216, 0.959);
+
 }
