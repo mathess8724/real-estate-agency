@@ -19,6 +19,20 @@
         background-color: rgba(93, 105, 109, 0.863);
 
     }
+    .upButton {
+        position: absolute;
+        margin-left: 20px;
+        transform: rotate(-40deg);
+        font-size: 30px;
+        transition: .3s;
+    }
+    .downButton {
+        transform: rotate(150deg);
+        font-size: 30px;
+        position: absolute;
+        margin-left: 20px;
+        transition: .3s;
+    }
 }
 .additionalPannelBodyOn
 {

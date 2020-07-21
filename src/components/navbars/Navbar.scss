@@ -15,7 +15,7 @@
     position: absolute;
     position:fixed;
     z-index: 20;
-    transition: 1s;
+    transition: .3s;
     
 }
 @media screen and (max-width:900px)
@@ -34,7 +34,7 @@
     .responsive
     {
         margin-top: 0px;
-        transition: 2s;
+        transition: .3s;
     }
     .logoContainer
     {
@@ -72,7 +72,7 @@
         align-items: center;
         border-radius: 3px;
         animation: modalEnter;
-        transition: 4s;
+        transition: .3s;
     }
 }
 .responsiveClose
@@ -82,11 +82,13 @@
     font-size: 46px;
     color: rgba(139, 139, 139, 0.466);
     cursor: pointer;
+    display: block;
 }
 .responsiveArrowUp
 {
     color: rgb(0, 0, 0);
     transition: 2s;
+    display: flex;
     
 }
 .responsiveArrowDown
@@ -94,7 +96,18 @@
     transform: rotate(-180deg);
     transition: 1s;
     color: rgba(139, 139, 139, 0.356);
-
+    display: flex;
+}
+.FontAwesome
+{
+  font-family: Helvetica, 'FontAwesome', sans-serif;
+}
+@media screen and (min-width:900px)
+{
+    .responsiveArrowDown
+    {
+        display: none;
+    }
 }
 @keyframes navBarEnter 
 {

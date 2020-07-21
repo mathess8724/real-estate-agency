@@ -16,10 +16,14 @@ function Home() {
 
     /////////////////properties array////////////////
     const [propertiesList, setPropertiesList] = useState([])
-    const [search, setSearch] = useState()
     const [propertiestype, setPropertiestype] = useState('sale')
     const [sortInfos, setSortinfos] = useState({ sort: 0, direction: true })
     const [maxPrice, setMaxPrice] = useState(1000000)
+    /////////////////////////////////////////////////
+
+    ///////////////Search/////////////////////////////
+    const[searchResult,setSearchresult] = useState([])
+    const [search,setSearch] = useState(false)
     /////////////////////////////////////////////////
 
     /////////////////modal param/////////////////////
@@ -165,7 +169,10 @@ function Home() {
                 isActive={active}
                 homeRef={homeBodyref}
                 Types={propertiestype}
-                updateTypes={setPropertiestype} />
+                updateTypes={setPropertiestype}
+                searchArray={propertiesList}
+                updateResults={setSearchresult}
+                setSearch={setSearch} />
             <AdditionalPannel updateSort={setSortinfos}
                 sortInfos={sortInfos}
                 maxPrice={maxPrice}
@@ -179,7 +186,9 @@ function Home() {
                     <h2>Properties</h2>
                     <div className="listContainer">
                         {
-                            checkSort(propertiesList).filter(filteredProperties =>
+                            
+                           search && searchResult.length <1 ? <div>Sorry, no result</div> :
+                            checkSort(search  ? searchResult : propertiesList).filter(filteredProperties =>
                                 filteredProperties.type === propertiestype)
                                 .filter(filteredProperties =>
                                     filteredProperties.price < maxPrice)

@@ -47,7 +47,7 @@ function handleChange(maxPrice){
 {
     noResult.noResult ?
         <div className='noResult'>
-            sorry, no result fo less expensive than {noResult.price} €
+            sorry, no result for less expensive than {noResult.price} €
         </div>
         :
         <div></div>
