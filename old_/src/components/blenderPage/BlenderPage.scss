@@ -1,0 +1,78 @@
+.solvebackground
+{
+    background-image: url('./blender.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.blenderPageBody
+{
+    background: #050801;
+    background-image: url('./blender.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bodyAnimate linear; 
+     animation-duration: 1s;
+     overflow-y: hidden;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+  }
+  @keyframes  bodyAnimate {
+ 
+     0%
+     {
+        
+         opacity: 0;
+        
+         /* transform: rotateX(360deg); */
+     }
+     50%
+     {
+        
+     }
+     100%
+     {
+         opacity: 1;
+        
+     }
+}
+.cardTitle .h2 
+{
+    margin-top: -50px;
+}
+@media screen and (max-width: 900px)
+{
+    .blenderPageBody .menuBar
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px) {
+
+    .blenderPageBody .modal
+    {
+       //height: 300px;
+    }
+
+    .blenderPageBody .modal-content
+{
+    
+    width: 350px;
+    height: 200px;
+    
+
+}
+.blenderPageBody .player
+{
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0;
+}
+.blenderPageBody .ytPlayer
+ {
+    width: 350px;
+    height: 200px;
+ }
+}

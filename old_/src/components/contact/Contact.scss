@@ -1,0 +1,326 @@
+.contactBody
+{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #050801;
+    //animation: bodyIn linear ;
+    animation-duration: 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition : 0.3s;
+    //align-items: center;
+    
+}
+@keyframes bodyIn
+{
+   from
+    {
+        opacity: 0;
+    }
+    
+    to
+    {
+        opacity: 1;
+    }
+}
+
+
+@keyframes bgColor 
+{
+    from
+    {
+        //background: linear-gradient(-360deg,transparent,#03e9f4);
+    }
+    to
+    {
+        //background: linear-gradient(360deg,transparent,#03e9f4);
+    }
+}
+
+.contactContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #060c21;
+    width: 60%;
+    height: 400px;
+    color: #fff;
+}
+.contactForm
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactSubjectInputs
+{
+    text-align: center;
+}
+.contactTexInputs
+{
+    text-align: center;
+}
+.contactLi
+{
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    //margin-bottom: 30px;
+    
+    
+}
+.contactLiImg
+{
+   
+    height: 50px;
+    margin-left: -20px;
+}
+
+.contactsList
+{
+    
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-start;
+    
+    
+}
+.contactsListContainer2
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.contactModule
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+
+}
+.contactModule span
+{
+    position: absolute;
+    width: 150%;
+    height: 110%;
+    background: #f00;
+}
+
+.test1 
+{
+    width: 100%;
+    height: 600px;
+    //background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //position: relative;
+    
+    
+
+}
+.test2 span 
+{
+    width: 598px;
+    height: 398px;
+    background: rgb(43, 255, 0);
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    animation: colorRotate 30s linear infinite;
+    
+}
+.test2
+{
+    width: 600px;
+    height: 400px;
+    
+    
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    background: linear-gradient();
+    
+}
+@keyframes colorRotate
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+.test3
+{
+    width:596px;
+    height: 396px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    z-index: 1500;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Piedra', cursive;
+    
+    
+}
+.newcardLabel
+{
+    position: relative;
+    width: 80px;
+    height: 800px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* place-items: center;
+    display: flex;
+    justify-content: center; */
+    //background: #1b1b1b;
+    
+}
+.newcardLabel input[type='checkbox']
+{
+    appearance: none;
+}
+.newcardLabel img{
+    
+    height: 50px;
+    z-index: 1000;
+    
+}
+.newcardSpan
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 90px;
+    width: 90px;
+    background: #1b1b1b;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,0,0,1),
+    inset  0 -4px 5px rgba(0,0,0,1),
+    inset 0 2px 2px rgba(255,255,255,0.5),
+    0 0 0 2px #000,
+    0 0 0 2px #0c0c0c,
+    0 0 0 3.5px #00a1ff;
+    color: 00a1ff; 
+    //f
+}
+.newcardSpan .svg{
+    //filter: hue-rotate(50deg);
+    color:red;
+    fill:red
+}
+.roundCard
+{
+    display:flex;
+    justify-content: center;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    background: #1b1b1b;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px rgba(0,0,0,1),
+    inset 0 -2px 5px rgba(0,0,0,1),
+    inset 0 2px 2px rgba(255,255,255,0.5),
+    0 0 0 2px #000,
+    0 0 0 2px #0c0c0c,
+    0 0 0 5.5px #00a1ff;
+
+
+}
+.roundCard 
+{
+    position: relative;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    background: #1b1b1b;
+    border-radius: 50%;
+    box-shadow: 0 0px 0px rgb(0, 0, 1)
+    inset 0 -2px 5px rgba(0,0,0,1),
+    inset 0 1px 1px rgba(255,255,255,0.1),
+          0 0 0 2px #000,
+          0 0 0 2px #0c0c0c,
+          0 0 0 2px #00a1ff;   
+    
+}
+ ~ .roundCardSpan
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background: #1b1b1b;
+    appearance: none;
+    box-shadow: 0 0px 0px rgb(0, 0, 1)
+    inset 0 -2px 5px rgba(0,0,0,1),
+    inset 0 2px 2px rgba(255,255,255,0.5),
+          0 0 0 2px #000,
+          0 0 0 2px #0c0c0c,
+          0 0 0 5.5px #00a1ff;   
+}
+@media screen and (max-width: 900px){
+
+    .contactBody .menuBar
+    {
+        display: none;
+    }
+    .test3
+    {
+        width: 296px;
+        //display: none;
+    }
+    .test2
+    {
+        width: 300px;
+        //display: none;
+    }
+    .test2 span 
+{
+    width: 298px;
+    height: 398px;
+    background: rgb(43, 255, 0);
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    animation: colorRotate 30s linear infinite;
+    
+}
+    .test1
+    {
+        //width: 300px;
+        //display: none;
+    }.contactsList
+    {
+        width: 200px;
+    }
+}
+

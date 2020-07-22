@@ -11,6 +11,7 @@
     align-items: center;
     transition:3s;
     animation: modalEnter;
+    z-index:500;
 }
 @keyframes modalEnter
 {
@@ -40,6 +41,7 @@
     border-radius: 3px;
     animation: modalEnter;
     transition: 4s;
+    
 }
 .back
 {
@@ -105,7 +107,19 @@
     text-align: justify;
 }
 
+.mdfytxtArea
+{
+    resize: none;
+    width: 600px;
+    height: 130px;
+}
 @media screen and (max-width: 900px){
+    .mdfytxtArea
+    {
+        //display:  none;
+        width:290px;
+        height: 200px;
+    }
     .modalContainer {
         background-color: #fff;
         height: 500px;

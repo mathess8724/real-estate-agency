@@ -1,0 +1,714 @@
+/* .webPageBody
+
+{
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #050801;
+}
+
+a
+{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 10px linear-gradient(
+        transparent,#0005 );
+}
+a:hover
+{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+a span
+{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 2s linear infinite;
+    
+}
+@keyframes animate1
+{
+    0%
+    {
+        left: -100%;
+    }
+    50%,100%
+    {
+        left: 100%;
+    }
+}
+a span:nth-child(2)
+{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2
+{
+    0%
+    {
+        top: -100%;
+    }
+    50%,100%
+    {
+        top: 100%;
+    }
+}
+a span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate3 2s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3
+{
+    0%
+    {
+        right: -100%;
+    }
+    50%,100%
+    {
+        right: 100%;
+    }
+}
+a span:nth-child(4)
+{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate4 2s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4
+{
+    0%
+    {
+        bottom: -100%;
+    }
+    50%,100%
+    {
+        bottom: 100%;
+    }
+}
+
+
+
+ */
+
+/* body{
+    background: #050801;
+} */
+ .menuBar
+ {
+     display: flex;
+     justify-content: space-evenly;
+     animation: menuAnimate linear; 
+     animation-duration: 1s;
+  }
+  @keyframes  menuAnimate {
+ 
+     0%
+     {
+         opacity: 0;
+         visibility: hidden;
+         transform: rotateX(90deg);
+         transform: translateX(200px);
+     }
+     50%
+     {
+         opacity: 1;
+     }
+     100%
+     {
+         opacity: 1;
+        visibility: visible;
+     }
+  }
+  
+ .titleBar
+ {
+     color: #03e9f4;
+     display: flex;
+     justify-content: center;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     filter: hue-rotate(340deg);
+     animation: none; 
+     animation-duration: 3s;
+  }
+  
+ .webpageBody
+ {
+     background: #050801;
+     min-height: 100vh;
+     background-image: url('./code.png');
+    background-repeat: no-repeat;
+    background-position: center ;
+    animation: bodyAnimate linear; 
+     animation-duration: 1s;
+    
+     
+     animation: bodyOverflow 6s linear;
+  }
+  @keyframes  bodyAnimate {
+ 
+     0%
+     {
+        
+         opacity: 0;
+         
+         /* transform: rotateX(360deg); */
+     }
+     50%
+     {
+        
+     }
+     100%
+     {
+         opacity: 1;
+        
+     }
+  }
+  
+  @keyframes  bodyOverflow {
+ 
+    0%
+    {
+       
+        overflow-x: hidden;
+        /* transform: rotateX(360deg); */
+    }
+    50%
+    {
+       
+    }
+    100%
+    {
+        
+       overflow-x: auto;
+    }
+ }
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
+
+.webPageContainer
+{
+    justify-content: center;
+    align-items: center;
+    //min-height: 80vh;
+    //position: relative;
+    width: 100%;
+    /* margin-top: 100px; */
+    //padding-left: 40px;
+    //padding-right: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    animation: pageAnimate linear; 
+    animation-duration: 2s;
+    overflow-Y: hidden;
+ }
+ @keyframes  pageAnimate {
+
+   from
+    {
+        opacity: 0;
+       transform: translateX(-500px)
+    }
+   
+    to
+    {
+        opacity: 1;
+        
+    }
+ }
+.webPageContainer .box
+{
+    position: relative;
+    width: 275px;
+    height: 275px;
+    margin: 30px;
+    background: #ccc;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
+    //border: solid 1px;
+    
+    box-shadow: -12px -12px 2px 1px rgba(0, 0, 255, .2);
+    animation: boxAnimate linear; 
+     animation-duration: 3s;
+  }
+  @keyframes  boxAnimate {
+ 
+     0%
+     {
+         opacity: 0;
+         /* visibility: hidden; */
+        /*  transform: rotateY(180deg); */
+     }
+     50%
+     {
+         
+     }
+     100%
+     {
+         opacity: 1;
+        /* visibility: visible; */
+     }
+  }
+.webPageContainer .box:hover
+{
+    transform: scale(1.25);
+    z-index: 0;
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+.webPageContainer .box .imgBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.webPageContainer .box .imgBx:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#f00,#000);
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: 0.5s;
+}
+.webPageContainer .box:hover .imgBx:before
+{
+    opacity: 1;
+}
+.webPageContainer .box .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.webPageContainer .box .content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+}
+.webPageContainer .box .content h2
+{
+    background: linear-gradient(290deg,transparent,#03e9f4);
+    color: #000;
+    transform: translateY(200px);
+    transition: 0.3s;
+    /* background: rgba(0, 0, 0, 0.39); ; */
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.cardTitle
+{
+    border-radius: 10px;
+}
+.modalContainer
+{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 500;
+    
+    
+}
+@media screen and (max-width:1000px) {
+
+    .webPageContainer .modal
+    {
+       //height: 300px;
+    }
+
+    .webPageContainer .modal-content
+{
+    
+    width: 350px;
+    height: 200px;
+    
+
+}
+.webPageContainer .player
+{
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0;
+}
+}
+.player
+{
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 0;
+}
+.ytPlayer 
+{
+    border-radius: 10px;
+}
+.webPageContainer .box .content p
+{
+    color: #fff;
+    transform: translateY(200px);
+    transition: 0.5s;
+    font-size: 14px;
+    position: relative;
+}
+.webPageContainer .box:hover .content h2
+{
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+.webPageContainer .box:hover .content p
+{
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+ /* The Modal (background) */
+ .modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background: #d8d8d84b;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -12px -12px 2px 1px rgba(0, 0, 255, .2);
+    margin: 15% auto; /* 15% from the top and centered */
+    
+    border: 1px solid #888;
+    width: 900px; /* Could be more or less, depending on screen size */
+    height: 500px;
+    transition: 4s;
+    animation: animate1 linear ;
+    animation-duration: 2s;
+    
+    
+    
+    //transform: rotate(90deg);
+  }
+  @keyframes animate1
+  {
+      0%
+      {
+        opacity: 0;
+        transform: rotateX(360deg);
+        height: 0px;
+        
+        
+      }
+      50%
+      {
+          opacity: 0;
+          transform: rotateX(360deg);
+      }
+      100%
+      {
+        opacity: 1;
+        
+      }
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+  .cardTitle{
+     margin-top: -180px;
+  }
+
+  @media screen and (max-width: 900px)
+  {
+      .webpageBody .menuBar
+      {
+          display: none;
+      }
+  }
+/////////////////////////
+
+
+.webPageContainer .customCardContainer
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	
+	
+
+}
+.webPageContainer .codeIco
+{
+	font-size: 58px;
+	color: #111110;
+	
+	
+	
+}
+.webPageContainer .customCardBox:hover
+{
+	cursor: pointer;
+	
+	.webPageContainer .codeIco
+	{
+		color: #00ffe7;
+		text-shadow: #00ffe7;
+		text-shadow: 0 0 15px #00a1ff,
+					0 0 30px #00a1ff;
+
+		
+	}
+	border: 1px solid #00ffe7;
+	.webPageContainer .customCardContent
+{
+	color: #00ffe7;
+	//text-shadow: #00ffe7;
+		text-shadow: 0 0 5px #00a1ff,
+					0 0 10px #00a1ff;
+}
+
+}
+@media screen and(max-width: 1000px)
+{
+    
+    .ytPlayer
+    {
+    margin-left: -20px;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0;
+    }
+	
+	.webPageContainer .customCardBox
+{
+    cursor: pointer;
+    margin-left: 100px;	
+	border: 1px solid #00ffe7;
+	.webPageContainer .customCardContent
+{
+	color: #00ffe7;
+	text-shadow: #00ffe7;
+		text-shadow: 0 0 5px #00a1ff,
+					0 0 10px #00a1ff;
+}
+
+}
+
+}
+.customCardContent .content, h2
+{
+    text-shadow: 0 0 5px #00a1ff,
+					0 0 15px #00a1ff;
+}
+.webPageContainer .customCardBox
+{
+	margin-top: 50px;
+	justify-content: flex-start;
+	display: flex;
+    flex-direction: column;
+    position: relative;
+	//place-items: center;
+	min-height: 360px;
+    width: 300px;
+    margin-right: 100px;
+	background: rgb(34, 34, 34);
+    border-radius: 5px;
+    
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0),
+    inset  0 -4px 35px rgb(0, 0, 0),
+    inset 0 2px 2px rgb(0, 0, 0),
+    0 0 0 5px rgba(0, 0, 0, 0.473),
+    0 0 0 5px #0000003a,
+	0 0 0 14px #20202011;
+	//padding: 25px;
+	animation : customCardBoxAnimate 2s linear;
+	
+}
+
+.webPageContainer .customCardHeader
+{
+    height: 40%;
+    width: 100%;
+    //background: #f00;
+}
+@keyframes customCardBoxAnimate
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+.webPageContainer .customCardContent
+{
+    //margin-top: 100px;
+    //background: green;
+    //height:60%;
+    transition: 5s;
+    color: #00ffe7;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.webPageContainer .imgBx
+{
+    height:200px;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.webPageContainer a
+{
+    text-decoration: none;
+}
+.cardBoxContent
+{
+    height: 60%;
+    //background: red;
+}
+.imgCardBox
+{
+    //background: green;
+    height: 40%;
+}
+.webPageContainer .customCardContent
+{
+    height: 60%;
+    margin-top: 0;
+    
+}
+.customCardContent h2
+{
+    margin:0;
+    padding-left:10px;
+    padding-right:10px;
+}
+.webPageContainer .moreButon
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    place-items: center;
+    font-size: 36px;
+    font-weight: 1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-left: 1px solid #00ffe7;
+    border-right: 1px solid #00ffe7;
+    border-top: 1px solid #00ffe7;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    //border: 1px solid #00ffe7;
+    margin: auto;
+    margin-top: 10px;
+    //position: absolute;
+    //bottom: -35px;
+    margin-left:130px;
+    z-index: 3500;
+    background: #00ffe58c;
+}
+.webPageContainer .moreButon:hover
+{
+    background: #00ffe5;
+    cursor:pointer;
+}
+.moreButon span
+{
+    border-left: 1px solid #00ffe7;
+    height :25px;
+}

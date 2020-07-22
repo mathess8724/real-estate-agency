@@ -1,0 +1,148 @@
+body{
+    position:relative
+}
+.sliderContainer
+{
+    position: fixed;
+    position: absolute;
+    align-items: center;    
+    transition: 3.5s;
+    background: #00a1ff;
+    width : 250px;
+    height: 100vh;
+    
+}
+.sliderisOpen
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 2500;
+    width: 250px;
+    height: 100vh;
+    margin-left: 0px;
+    //background-color: greenyellow;
+    
+    position: fixed;
+    //animation: slide .5s linear;
+    transition:  margin .3s;
+    //margin: 0 0 0 250px;
+    //visibility: hidden;
+    //display: none;
+   
+    
+
+}
+
+
+.sliderButton
+{
+   color: #00ffe7;
+   font-size: 48px;
+   font-weight: 100; 
+   margin-left: 90px;
+   cursor: pointer;
+   height: 60px;
+   transition: 0.3s;
+   text-shadow: 0 0 5px #00a1ff,
+                    0 0 15px #00a1ff;
+    opacity: .3;
+   
+
+}
+.sliderButtonOpen
+    {
+        color: #00ffe7;
+        font-size: 48px;
+        font-weight: 100; 
+        //margin-left: 60%;
+        cursor: pointer;
+        height: 60px;
+        text-shadow: 0 0 5px #00a1ff,
+                         0 0 15px #00a1ff;
+                         opacity: 1;
+        transform: rotate(90deg);
+    }
+.sliderBody
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 4500;
+    width: 250px;
+    height: 100%;
+    
+    margin-left: -250px;
+    //background-color: red;
+    
+    position: fixed;
+    //animation: slide .5s linear;
+    transition:  margin 0.3s;
+    //margin: 0 0 0 250px;
+    //visibility: hidden;
+    display: none;
+    
+}
+.fixedtest
+{
+	
+	//background: red;
+	position: absolute;
+	position: fixed;
+    font-style: 40px;
+    z-index: 5000;
+}
+
+@media screen and (max-width: 900px)
+{
+    .sliderBody
+    {
+       // visibility: visible;
+       display: flex;
+       position: absolute;
+       position: fixed;
+
+    }
+    .sliderContainer .menuBar
+    {
+        display: flex;
+    }
+    .menuBarSlider .neonLink
+    {
+    
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 2px #03e9f4,
+                    0 0 15px #03e9f4,
+                    0 0 30px #03e9f4,
+                    0 0 100px #03e9f4;
+                   
+    }
+    .menuBarSlider
+    {
+        //transition: 3s;
+        //animation: slide .5s linear;
+    }
+    .menuBarSlider .neonLink
+    {
+        font-size: 12px;
+        
+    }
+    
+}
+@keyframes slide 
+{
+    0%
+    {
+        
+            opacity: 0;
+    }
+    100%
+    {
+        
+
+            opacity: 1;
+       
+    }
+
+}

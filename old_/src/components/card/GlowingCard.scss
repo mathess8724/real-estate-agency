@@ -1,0 +1,94 @@
+.glowingCardContainer
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    background: linear-gradient(235deg,#03e9f4,#010615,#33ff00,);
+    animation: glowingIn 1s linear;
+    //animation: colorTurner 0.2s linear infinite;
+    transform-origin: top;
+}
+@keyframes colorTurner 
+{
+    0%
+    {
+        
+        background: linear-gradient(0deg,#33ff00,#010615,#03e9f4);
+        
+    }
+    50%
+    {
+        background: linear-gradient(180deg,#33ff00,#010615,#03e9f4);
+        //background: linear-gradient(235deg,#f71414,#010615,#03e9f4);
+        
+    }
+    100%
+    {
+        background: linear-gradient(36deg,#33ff00,#010615,#03e9f4);
+        //background: linear-gradient(235deg,#03e9f4,#010615,#fbff00);
+    }
+}
+@keyframes glowingIn 
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateX(90deg);
+        
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.glowingCardContainer :before
+{
+    content: '';
+   
+}
+.glowingCardBox
+{
+
+    width: 797px;
+    height: 397px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+    
+}
+@media screen and (max-width : 1200px)
+{
+    .glowingCardBox
+    {
+        width: 597px;   
+    }
+    .glowingCardContainer
+    {
+      width: 600px;
+    }
+}
+@media screen and (max-width : 900px)
+{
+    .glowingCardBox
+    {
+        width: 297px;   
+    }
+    .glowingCardContainer
+    {
+      width: 300px;
+    }
+}
+.glowingContent
+{
+   padding: 10%;
+}
+.glonwingTitle
+{
+    text-align: center;
+}

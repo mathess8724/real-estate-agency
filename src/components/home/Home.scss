@@ -60,7 +60,7 @@
     padding-right: 10px;
     overflow: hidden;
     position: relative;
-    transition: 3s;
+    
     animation: modalEnter;
 }
 .listContainer
@@ -115,6 +115,7 @@
 .propertieBox:hover
 {
     cursor: pointer;
+    margin-top: -20px;
 }
 .descContainer
 {
@@ -125,6 +126,8 @@
 {
    
     position: absolute;
+    filter: grayscale(50%);
+    
     
 }
 #adminBackgroundOn
@@ -153,6 +156,73 @@
         opacity: .5;
     }
 }
+.mdfyContainer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //position: relative;
+}
+.edit
+{
+    color: #0083fd94;
+    z-index: 50;
+    font-size: 30px;
+    margin-right: 50px;
+    
+}
+.edit:hover
+{
+    color: #0083fd;
+    cursor: pointer;
+    
+   
+}
+.delButton
+{
+    color: #fd0054a8;
+    font-size: 30px;
+    z-index: 50;
+    
+}
+.delButton:hover
+{
+    color: #fd0054;
+    cursor: pointer;
+  
+   
+}
+.addbutton
+{
+    font-size: 40px;
+    color: #0083fdab;
 
+}
+.addbutton:hover
+{
+    cursor: pointer;
+    color: #0083fd;
 
+}
+.head
+{
+    width: 100vw;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+
+}
+.headImg
+{
+    width: 100vw;
+    height: 500px;
+}
+@media screen and (max-width : 900px)
+{
+    .headImg
+    {
+        height: 300px;
+    }
+}
 

@@ -58,9 +58,11 @@ function Login(props){
                     <img className='wheel2' src={Wheel} alt="wheel"/>
                 </div>               
             <div className="loginContainer">
+            <i onClick={ () => props.setLogin(!props.login)} className="far fa-times-circle closeButton"></i>                    
+
                 <h1>Login</h1>
-                <input ref={mailRef} placeholder='Email' type="text" className="mailInput"/>
-                <input ref={passRef} placeholder='Email' type="password" className="passInput"/>
+                <input ref={mailRef} placeholder='Email' type="text" className="mailInput" id='mailInput'/>
+                <input ref={passRef} placeholder='Email' type="password" className="passInput" id='passInput'/>
                 <div onClick={ () => handleConnect('connect',mailRef.current.value, passRef.current.value)} className="connectButton">
                     Connect
                 </div>

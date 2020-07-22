@@ -1,0 +1,56 @@
+
+
+.wheelBody
+{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+.wheelContainer
+{
+    height: 450px;
+    width: 450px;
+    padding: 0;
+    opacity: 0.2;
+    animation: wheel 60s linear infinite ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    
+    
+}
+.wheel
+{
+    
+    background: transparent;
+    //animation: bodyAnimate;
+    //animation-duration: 5s linear infinite;
+    height: 100%;
+    filter: hue-rotate(-300deg);
+}
+
+@keyframes wheel
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotate(360deg);
+        filter: hue-rotate(30deg);
+    }
+    50%
+    {
+        opacity: 0.2;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+.adminContainer
+{
+    position: relative;
+}
+

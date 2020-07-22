@@ -26,10 +26,11 @@ function checkPrice(){
 }
 
 function handleChange(maxPrice){
-
+    console.log('chang price', props.propertiestype)
     let minPrice = props.propertiesList.filter(filteredProperties =>
         filteredProperties.type === props.propertiestype)        
         .sort((a,b) => a.price - b.price)
+        //console.log(minPrice)
         let stopPrice = maxPrice * 50000
         //console.log(stopPrice,minPrice[0].price)
     stopPrice > minPrice[0].price ? props.updateMaxPrice(maxPrice * 50000) : console.log('sorry no result')

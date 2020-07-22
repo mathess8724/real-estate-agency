@@ -20,6 +20,15 @@
 }
 @media screen and (max-width:900px)
 {
+    .logoContainer
+    {
+        width: 50%;
+    }
+    .compagnyLogo
+    {
+        margin-top: 5px;
+        margin-bottom: -30px;
+    }
     .navBarBody
     {
         border-bottom-left-radius: 100px;
@@ -73,6 +82,12 @@
         border-radius: 3px;
         animation: modalEnter;
         transition: .3s;
+    }
+    #signIn
+    {
+        margin: auto;
+        margin-top: 10px;
+        //-bottom: -20px;
     }
 }
 .responsiveClose
@@ -176,6 +191,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
 .signInbutton:hover{
     cursor: pointer;
