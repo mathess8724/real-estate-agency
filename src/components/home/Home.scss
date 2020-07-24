@@ -5,6 +5,10 @@
     //padding-top: 60px;
     overflow-x: hidden;
 }
+.noSearchResult
+{
+    margin-top: 180px;
+}
 .homeContainair
 {
     min-height: 100%;
@@ -188,6 +192,7 @@
 .delButton:hover
 {
     color: #fd0054;
+    
     cursor: pointer;
   
    
@@ -218,11 +223,107 @@
     width: 100vw;
     height: 500px;
 }
+
+.imgModify
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+.addImg
+{
+    margin-left: -171px;
+    margin-right: 20px;
+}
+.previewgaleryContainer
+{
+    height: 400px;
+    width: 600px;
+    border: 1px solid #00000073;    
+}    
+.previewgalery
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 350px;
+    width: 600px;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-x: hidden;
+}
+.previewBox
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+#previewImgAdd
+{
+    font-size:26px;
+    color:#0083fdab;
+}
+#previewImgAdd:hover
+{
+    cursor: pointer;
+    color: #0083fd;
+}
+#previewImgDel
+{
+    font-size:26px;
+    
+    
+    color: #fd0054a8;
+}
+#previewImgDel:hover
+{
+    cursor: pointer;
+    color: #fd0054;
+}
+.previewImg
+{
+    height: 130px;
+    width: 130px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.previewBox
+{
+
+}
+.editImg
+{    
+    margin-left: 50px;
+}
+
 @media screen and (max-width : 900px)
 {
     .headImg
     {
         height: 300px;
+    }
+    .previewgalery
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 150px;
+        width: 300px;
+        overflow: scroll;
+        overflow-x: scroll;
+        overflow-x: scroll;
+        overflow-x: hidden;
+    }
+    .previewgaleryContainer
+    {
+        height: 210px;
     }
 }
 
