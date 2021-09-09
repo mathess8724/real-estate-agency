@@ -9,13 +9,7 @@ const inputRef = useRef()
 
 const [noResult, setNoresult] = useState({'noResult':false, 'price':1})
 
-useEffect(() => {
-    //console.log(inputRef)
-    
-    
-    
-    //console.log(props.isActive)
-    //console.log(props.scrollActive)
+useEffect(() => {   
 
 },[]);
 function checkPrice(){
@@ -30,9 +24,7 @@ function handleChange(maxPrice){
     let minPrice = props.propertiesList.filter(filteredProperties =>
         filteredProperties.type === props.propertiestype)        
         .sort((a,b) => a.price - b.price)
-        //console.log(minPrice)
         let stopPrice = maxPrice * 50000
-        //console.log(stopPrice,minPrice[0].price)
     stopPrice > minPrice[0].price ? props.updateMaxPrice(maxPrice * 50000) : console.log('sorry no result')
     stopPrice < minPrice[0].price ? setNoresult({'noResult': true, 'price': minPrice[0].price}) : setNoresult([])
 }
@@ -53,8 +45,6 @@ function handleChange(maxPrice){
         :
         <div></div>
 }
-
-
         </div>
 
     )
