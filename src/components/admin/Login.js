@@ -8,8 +8,6 @@ import FirebaseConfig from '../config/FirebaseConfig'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {withRouter} from 'react-router-dom'
 
-
-
 function Login(props){
 
 
@@ -17,13 +15,8 @@ function Login(props){
     const passRef = useRef('passRef')
     
 
-    useEffect(() => {
-        //FirebaseConfig()
-        checkRedirect()
-        //firebase.initializeApp(FirebaseCfg)
-        //let user = firebase.auth().currentUser;
-        //console.log(firebase.auth().currentUser)
-        
+    useEffect(() => {   
+        checkRedirect()        
     },[checkRedirect])
    
     
@@ -37,21 +30,16 @@ function Login(props){
         console.log(email,password)
         
       await  type === 'logout' ? firebase.auth().signOut()
-                            : firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-                                // Handle Errors here.
+                            : firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {                               
                                 var errorCode = error.code;
-                                var errorMessage = error.message;
-                                // ...
+                                var errorMessage = error.message;                                
                               });
-
-
                               checkRedirect()
     }
 
     
     return (
-        <div className='adminBody'>
-           
+        <div className='adminBody'>           
             <div className="adminBackground">
                 <div className="wheelContainer">
                     <img className='wheel1' src={Wheel} alt="wheel"/>
