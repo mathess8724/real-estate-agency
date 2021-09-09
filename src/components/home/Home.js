@@ -11,7 +11,6 @@ import Login from '../admin/Login'
 import Wheel from '../admin/wheel2.png'
 import Hands from './hands.webp'
 
-//import RangeSlider from '../sliders/RangeSlider';
 
 function Home(props) {
 
@@ -57,8 +56,6 @@ function Home(props) {
         "type": "sale"
     }
 
-    //////////////////////////////////////////////////
-
     /////////////////modal param/////////////////////
     const [isModal, setIsModal] = useState(false)
     const modalRef = useRef('modalRef')
@@ -83,28 +80,20 @@ function Home(props) {
             if (id >= 0 && id <= max - 1) {
                 //console.log('can change!')
                 setModalGaleryCurrent(id)
-            } else {
-                //console.log('cant change')
             }
-            //console.log('new id is ' + id)
-
         }
         function handelCloseModal() {
             setIsModal(false)
             setModify(false)
         }
         async function handleAddImg(file) {
-
             if (file) {
                 console.log(file)
                 let id = Date.now()
                 let ref = firebase.storage().ref('/img/contacts/' + id)
                 console.log(file.name)
-                await ref.put(file).then(function (snapshot) {
-                    //let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                await ref.put(file).then(function (snapshot) {                    
                     setLoadingAdd(snapshot.bytesTransferred / snapshot.totalBytes * 100)
-                    //console.log('Upload is ' + progress + '% done');
-
                     console.log('file Uploaded');
                     snapshot.ref.getDownloadURL().then(function (downloadURL) {
                         console.log('File available at', downloadURL);
@@ -115,23 +104,17 @@ function Home(props) {
                             "imgSrc": downloadURL
                         }
                         firebase.database().ref(`/Properties/${modifyId}/imgGalerie/${id}`).set(newImgGalery)
-
-
                     });
 
                 });
             }
-
         }
         function handlePreviewDel(id) {
-            let check = propertiesList[modifyId].imgGalerie.length
-            console.log(check)
+            let check = propertiesList[modifyId].imgGalerie.length          
 
             if (check === 1) {
-
                 alert('Minimal one image is required!')
             } else {
-
                 let target = `/Properties/${modifyId}/imgGalerie/`
                 let ref = firebase.database().ref(target)
                 if (window.confirm(`this image will be removed, are you sure?`)) {
@@ -140,54 +123,19 @@ function Home(props) {
                     tempArray.map((item, index) => (
                         tempArray[index].id = index
                     ))
-                    ref.remove()
-                    //console.log(tempArray)
+                    ref.remove()                    
                     let newRef = firebase.database().ref(`/Properties/${modifyId}/imgGalerie`)
                     ref.set(tempArray)
-
-
-                    //console.log(firebase.database().ref(`/Properties/${modifyId}/imgGalerie`).once)
-                    //let img = propertiesList[modifyId].imgGalerie[i]
-                    //let ref = firebase.database().ref(`Properties/${modifyId}/imgGalerie/${i}`)
-                    //console.log(img)
-                    // ref.set(img)
-
-
-                    //console.log(check)
                 }
             }
-
-
         }
 
-        //console.log(modalInfos)
         return (
-
-
             <div className="modalBody">
                 <span className="back"></span>
                 <div className="modalContainerNoScroll">
                     <div className="modalContainer">
-                        <i onClick={() => handelCloseModal()} className="far fa-times-circle closeButton"></i>
-                        {/* {
-                               props.User && modify ? <div className="imgModify">
-                               <div className="addImg">
-                                   
-                                   <i onClick={ () => handleAdd()} className="fas fa-folder-plus "></i>
-                               </div>
-                               <div className="editImg">
-                               
-                               <i onClick={ () => handleAdd()} className="far fa-trash-alt"></i>
-                               </div>
-                               <input onChange={ (e) => handleWrite('name', e.target.value)} defaultValue={modalInfos.name} type="text"/>
-                                  
-                               
-
-                           </div> 
-                           : <h1>{modalInfos.name}</h1>
-                        
-
-                            }               */}
+                        <i onClick={() => handelCloseModal()} className="far fa-times-circle closeButton"></i>                     
                         {
                             props.User && modify ? <h1><input onChange={(e) => handleWrite('name', e.target.value)} defaultValue={modalInfos.name} type="text" /></h1>
 
@@ -222,7 +170,6 @@ function Home(props) {
                                         </div>
                                     </div>
                                     :
-
                                     <img className='img' src={modalInfos.imgGalerie[modalGaleryCurrent].imgSrc} alt="" />
                             }
                             <i style={modalGaleryCurrent === modalInfos.imgGalerie.length - 1 ? { visibility: 'hidden' } : { visibility: 'visible' }} onClick={() => changeImg('right')} className='fas fa-chevron-right imgArrows'></i>
@@ -250,8 +197,7 @@ function Home(props) {
         )
     }
 
-    function handleModal(id, propertie) {
-        //console.log(id)
+    function handleModal(id, propertie) {       
         id === 'imgBox' && setIsModal(!isModal)
         id === 'imgBox' && setModalInfos(propertie)
         id === 'imgBox' && setModalGaleryCurrent(propertie.imgSrc)
@@ -269,8 +215,6 @@ function Home(props) {
         setModify(true)
         setModalInfos(propertiesList[id])
         setIsModal(true)
-
-
     }
     function handleWrite(container, content) {
         function ReeditArray() {
@@ -285,17 +229,10 @@ function Home(props) {
 
             ))
         }
-        container === 'desc' && charsCalc(content.length)
-        //console.log(container, content, modifyId)
-        let target = `/Properties/${modifyId}/${container}`
-        //console.log(target)
+        container === 'desc' && charsCalc(content.length)        
+        let target = `/Properties/${modifyId}/${container}`     
         let ref = firebase.database().ref(target)
-        ref.set(content)
-        //onsole.log(container, content)
-        /* let target = `/Properties/${modifyId}/name`
-        console.log(target)
-        let ref = firebase.database().ref(target)
-        ref.set('content') */
+        ref.set(content)    
     }
     function charsCalc(e) {
         setAreaMaxTxt(300 - e)
@@ -330,51 +267,27 @@ function Home(props) {
         //firebase.initializeApp(FirebaseConfig())
         const fetchData = () => {
             const dbRef = firebase.database().ref('/Properties')
-            dbRef.on('value', snapshot => {
-                //console.log('normal ',snapshot.val())
-                checkSort(snapshot.val())
-                //console.log('sorted ',snapshot.val())
+            dbRef.on('value', snapshot => {                
+                checkSort(snapshot.val())               
                 setPropertiesList(snapshot.val())
-                setPreview(snapshot.val())
-                //console.log(homeBodyref)
-                setHomeHeight(homeBodyref.heigth)
-                //console.log(homeBodyref)
-                /* firebase.auth().onAuthStateChanged(function(user) {
-                    if (user) {
-                      console.log('user')
-                      setUser(user)
-                    } else {
-                      console.log('no user')
-                    }
-                  }); */
-
-                /*  firebase.auth().signInWithEmailAndPassword('mathesmsm@gmail.com', '87244168Math').catch(function(error) {
-                     // Handle Errors here.
-                     var errorCode = error.code;
-                     var errorMessage = error.message;
-                     // ...
-                     //console.log(firebase.auth().currentUser)
-                 }); */
+                setPreview(snapshot.val())               
+                setHomeHeight(homeBodyref.heigth)               
             })
         }
         fetchData()
-
     }, []);
     /////////////////Links props////////////////////////////
     const [active, setActive] = useState(0)
-
-    //////////////////////////////////////////////////////////
 
     ////////////////////Sort function//////////////////////////
     function checkSort(array) {
         let sortType = sortInfos;
         let result;
-
         if (sortInfos) {
             //sort by price
             if (sortInfos.sort === 0) {
                 sortInfos.direction ? result = array.sort((a, b) => a.price - b.price) : result = array.sort((a, b) => b.price - a.price)
-                //console.log(result)
+                
             }
             //sort by surface
             if (sortInfos.sort === 1) {
@@ -401,16 +314,10 @@ function Home(props) {
         } else {
             return array
         }
-
-
-
-
     }
     ///////////////////////////////////////////////////////////
     return (
         <div ref={homeBodyref} className="homeBody">
-
-
             {
                 props.User &&
                 <div id='adminBodyOn' className="adminBody">
@@ -462,7 +369,6 @@ function Home(props) {
                     }
                     <div className="listContainer">
                         {
-
                             search && searchResult.length < 1 ? <div className='noSearchResult'>Sorry, no result</div> :
                                 checkSort(search ? searchResult : propertiesList).filter(filteredProperties =>
                                     filteredProperties.type === propertiestype)
