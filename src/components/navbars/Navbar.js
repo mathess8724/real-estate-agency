@@ -13,17 +13,12 @@ function Navbar(props) {
 
 
     useEffect(() => {
-        //console.log(props.isActive)
-        //console.log(props.scrollActive)
 
     }, []);
     ////////////////Link activation/////////////////////
     function handleActive(id) {
-        //console.log('id is', id, 'props is ',  props.isActive)
-        //console.log(props.homeRef.current.clientHeight)
         props.updateActive(id)
-        id === 0 ? props.updateTypes('sale') : props.updateTypes('rent')
-        //console.log('id is', id, 'props is ',  props.isActive)
+        id === 0 ? props.updateTypes('sale') : props.updateTypes('rent')       
     }
     ///////////////////////////////////////////////////
     function handleResponsive() {
@@ -42,7 +37,6 @@ function Navbar(props) {
 
         if (search.length > 2 ){
             props.setSearch(true)
-
             searchArray.map((check,index) => (
                 //console.log(check.city.indexOf(search))
                 check.city.toString().toLowerCase().indexOf(search) > -1 && console.log('found, will add it!', check.name) + results.push(check) ,
@@ -64,9 +58,6 @@ function Navbar(props) {
             !props.User ? props.setLogin(true) : firebase.auth().signOut()
             responsiveNav  && setResponsiveNav(!responsiveNav)
         }
-
-
-
     return (
         <div ref={navbarRef} className={responsiveNav ? 'navBarBody responsive' : 'navBarBody'}>
             <div className="logoContainer">
@@ -82,8 +73,7 @@ function Navbar(props) {
                 <div id='signIn' className='signInbutton' onClick={ () => handleLog()} >{props.User ? 'logout' : 'sign in'}</div>
             </div>           
             <i onClick={() => handleResponsive()}  className={responsiveNav ? 'fas fa-arrow-circle-up responsiveClose responsiveArrowUp' : 'fas fa-arrow-circle-up responsiveClose responsiveArrowDown'}></i>
-            <div></div>
-            
+            <div></div>            
         </div>
     )
 }
