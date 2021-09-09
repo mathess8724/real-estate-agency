@@ -4,27 +4,19 @@ import { useState } from 'react';
 import RangeSlider from '../sliders/RangeSlider'
 
 function AdditionalPannel(props) {
-
     const [isSlidePannel, setIsSlidePannel] = useState(false)
-
     function handlePannel() {
         setIsSlidePannel(!isSlidePannel)
     }
     function handleSort(sortType, direction = true) {
-        //console.log(props.sortInfos.sort)
-        
-           props.updateSort({ sort: sortType, direction })
-        
+           props.updateSort({ sort: sortType, direction })        
     }
-
     return (
         <div className={isSlidePannel ? 'additionalPannelBody additionalPannelBodyOn' : 'additionalPannelBody'}>
-
             <i className={isSlidePannel ? 'fas fa-arrow-circle-left arrowIco arrowIcoOn' : 'fas fa-arrow-circle-left arrowIco'} onClick={() => handlePannel()}></i>
             <h2>Sort houses</h2>
             <hr />
             <div className="additionalPanneleContainair">
-
                 <div className="priceSlider">
                     Max price : {props.maxPrice} €
                         <RangeSlider maxPrice={props.maxPrice}
@@ -74,10 +66,6 @@ function AdditionalPannel(props) {
                         Sort number of rooms
                    </div>
                 </div>
-
-
-
-
                 <div className="postalCondeContainer" onClick={() => handleSort(3)} >
                     .
                 </div>
